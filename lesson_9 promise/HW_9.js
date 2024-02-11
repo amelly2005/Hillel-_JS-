@@ -1,3 +1,4 @@
+const { strict } = require("assert");
 
 /*Створіть дві асинхронні функції для здійснення запитів до сервера:
 
@@ -7,10 +8,11 @@
 
 Викликайте ці функції. Використовуйте методи Promise.all та Promise.allSettled, передаючи їм масив із викликами обох функцій. Виведіть результат виконання цих функцій.
 */
+"use strict"
 
-async function getComments() {
+  async () => {
     const url = 'https://jsonplaceholder.typicode.com/comments/1';
-  
+
     try {
       const response = await fetch(url);
       const comments = await response.json();
